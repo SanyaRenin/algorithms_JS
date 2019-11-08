@@ -1,7 +1,7 @@
 const initArr = [8, 9, 3, 2, 7, 55, 55, 1, 4, 6]
 
 function partition (arr, low, hi) {
-	const pivotPosition = arr[Math.floor(Math.random() * arr.length)],
+	const pivotPosition = Math.floor(Math.random() * arr.length),
 		pivot = arr[pivotPosition]
 
 		while (hi >= low) {
@@ -31,7 +31,6 @@ function quickSort(
 
 	if (low < hi) {
 		const index = partition (arr, low, hi)
-		console.log(`arr = ${arr} low = ${low} hi = ${hi} index = ${index}`)
 		quickSort(arr, low, index-1)
 		quickSort(arr, index, hi)
 	}
