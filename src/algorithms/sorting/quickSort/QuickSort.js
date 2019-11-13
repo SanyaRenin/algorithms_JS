@@ -12,9 +12,7 @@ function partition (arr, low, hi) {
 				low++
 			}
 			if (hi >= low) {
-				const tmp = arr[low]
-				arr[low] = arr[hi]
-				arr[hi] = tmp
+				[arr[low], arr[hi]] = [arr[hi], arr[low]]
 				hi--
 				low++
 			}
